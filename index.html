@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="toggleTheme" class="btn btn-toggle">Dark Theme</button>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 shadow-lg position-relative">
+            <h1 class="text-center mb-4">Sinhala - English Translator</h1>
+            <div class="form-group">
+                <label for="inputText">Enter Text:</label>
+                <input type="text" class="form-control" id="inputText" placeholder="Type here...">
+            </div>
+            <div class="form-group">
+                <label for="languageSelect">Translate to:</label>
+                <select class="form-control" id="languageSelect">
+                    <option value="si-en">Sinhala to English</option>
+                    <option value="en-si">English to Sinhala</option>
+                </select>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="translate()">Translate</button>
+            <div class="mt-4">
+                <h4>Translation:</h4>
+                <p id="outputText" class="output-box"></p>
+            </div>
+            <div id="errorMessage" class="mt-2 text-danger"></div>
+            <div id="loadingSpinner" class="d-none position-absolute top-50 start-50 translate-middle">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="made-by"><a href="https://github.com/HirukaViyath2006" target="_blank">Made by Hiruka</a></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="translator.js"></script>
+</body>
+</html>
